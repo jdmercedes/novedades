@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>REPORTE DE NOVEDADES</h1>
+  </header>
+  <main>
+    <div class="main__div">
+      <div class="form__div">
+        <form class="form">
+          <div class="form__input-div">
+            <label class="form__input-label">Fecha</label>
+            <input id="inputDate" class="form__input" type="date">
+          </div>
+          <div class="form__input-div">
+            <label class="form__input-label">Numero de empleado</label>
+            <input class="form__input" id="numE" type="number">
+          </div>
+          <div class="form__input-div">
+            <label class="form__input-label">Nombre de empleado</label>
+            <input class="form__input" id="nomE" type="text" disabled>
+          </div>
+          <div class="form__input-div">
+            <label class="form__input-label">Area o Departamento</label>
+            <input class="form__input" id="area" type="text" disabled>
+          </div>
+          <div class="form__input-div form__options-div">
+            <label for="novedad" class="form__input-label">Tipo de novedad</label>
+            <input id="novedad" class="form__input" type="text" placeholder="Selecciona un tipo de novedad">
+            <div id="novedadesOptions" class="form__options-container" id="options-container">
+              <?!= novedades ?>
+            </div>
+          </div>
+          <div class="form__input-div">
+            <label class="form__input-label">Detalles</label>
+            <textarea id="detalle" class="form__input" placeholder="Indiqua detalles adicionales"></textarea>
+          </div>
+          <input id="btnAgregar" type="button" class="form__button" value="Agregar">
+          <input id="btnEnviar" type="button" class="form__button" value="Enviar">
+        </form>
+        <i class="fi fi-rs-trash icon hide" id="icon"></i>
+      </div>
+      <div class="table__div">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Num. empleado</th>
+              <th>Empleado</th>
+              <th>Area</th>
+              <th>Novedad</th>
+              <th>Detalles</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
